@@ -62,7 +62,7 @@ docker pull your-dockerhub-username/beancount-docker:latest
 # 运行容器
 docker run -d \
   --name beancount \
-  -p 6000:6000 \
+  -p 5000:5000 \
   -v $(pwd)/data:/data \
   your-dockerhub-username/beancount-docker:latest
 ```
@@ -81,7 +81,7 @@ docker run -d \
 
 3. **访问Web界面**
    
-   打开浏览器访问: http://localhost:6000
+   打开浏览器访问: http://localhost:5000
 
 ### 使用Docker Compose
 
@@ -162,7 +162,7 @@ beancount-docker/
 
 ### 修改端口
 
-默认端口是6000，如需修改，可以：
+默认端口是5000，如需修改，可以：
 
 1. 编辑 `build.sh` 脚本中的端口映射
 2. 或者修改 `docker-compose.yml` 中的端口配置

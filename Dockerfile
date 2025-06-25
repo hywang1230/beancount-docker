@@ -43,11 +43,11 @@ USER beancount
 VOLUME ["/data"]
 
 # 暴露端口（用于fava web界面）
-EXPOSE 6000
+EXPOSE 5000
 
 # 健康检查
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
-    CMD curl -f http://localhost:6000/ || exit 1
+    CMD curl -f http://localhost:5000/ || exit 1
 
 # 设置默认命令
-CMD ["fava", "/data/main.beancount", "--host", "0.0.0.0", "--port", "6000"] 
+CMD ["fava", "/data/main.beancount"] 
