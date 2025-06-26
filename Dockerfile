@@ -20,4 +20,4 @@ WORKDIR /data
 
 # 默认运行 fava（Beancount 的 Web 前端）
 EXPOSE 5000
-CMD ["fava", "--host", "0.0.0.0", "main.beancount"]
+CMD ["fava", "--host", "0.0.0.0", "main.bean"]
